@@ -65,6 +65,11 @@
     button:active {
       background-color: #bfbfbf;
     }
+
+    ::placeholder {
+      color: rgb(54, 192, 141);
+      opacity: 1; /* Firefox */
+    }
   </style>
   <script type="text/javascript">
     function clearInput() {
@@ -86,7 +91,7 @@
 </head>
 <body>
   <div class="calculator">
-    <input type="text" id="result" readonly>
+    <input type="text" id="result" placeholder="0" readonly>
     <div class="btns-container">
       
       <button onclick="appendInput('7')">7</button>
