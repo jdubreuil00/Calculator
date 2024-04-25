@@ -44,10 +44,15 @@ p, label, select, #Forecast, #loc{
 }
 
 button{
+    margin-top: 10px;
     background-color: rgb(68, 68, 233);
     color:#fff;
+    width:100%;
+    height:40px;
+    font-size: 25px;
     border: none;
     padding: 4px 8px 4px 8px;
     border-radius: 4px;
+    cursor: pointer;
     animation: moveupwht 2s;
 }
