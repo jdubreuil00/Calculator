@@ -39,8 +39,8 @@ p, label, select, #Forecast, #loc{
 }
 
 @keyframes moveupwht {
-    0%{translate: 0% 100%;color: rgba(1, 1, 1,0);}
-    100%{translate: 0 0;color: rgba(1, 1, 1,1);}
+    0%{translate: 0% 100%;color: rgba(255, 255, 255,0);background-color: rgba(68, 68, 233,0);}
+    100%{translate: 0 0;color: rgba(255, 255, 255,1);background-color: rgba(68, 68, 233,1);}
 }
 
 button{
@@ -49,5 +49,5 @@ button{
     border: none;
     padding: 4px 8px 4px 8px;
     border-radius: 4px;
-    animation: moveup 2s;
+    animation: moveupwht 2s;
 }
