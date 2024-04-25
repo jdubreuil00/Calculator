@@ -1,0 +1,43 @@
+@font-face {
+    font-family: cool;
+    src: url(../fonts/coolvetica.otf);
+}
+
+@font-face {
+    font-family: robo;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+body{
+    background-color: deepskyblue;
+}
+#main{
+    text-align: center;
+    width: 390px;
+    margin: 0 auto 0 auto;
+}
+#Forecast{
+    text-align: justify;
+}
+h1, h2, h3, button{
+    font-family: cool;
+}
+p, label, select, #Forecast, #loc{
+    font-family: robo;
+}
+
+#Forecast{
+    /*animation: wipe;
+    animation-duration: 5s;*/
+}
+@keyframes wipe {
+    0% {color: rgba(0, 0, 0,0);}
+    100% {color: rgba(0, 0, 0, 1);}
+    
+}
+button{
+    background-color: rgb(68, 68, 233);
+    color:#fff;
+    border: none;
+    padding: 4px 8px 4px 8px;
+    border-radius: 4px;
+}

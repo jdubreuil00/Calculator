@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="main">
+    <h1>Welcome to Jordan's Weather App Page</h1>
+    <p id="status">You can get the weather by gettting your location or selecting a location below.</p>
+    <button id="localWeather">Get Weather for your location</button>
+    <p>or select a city from below</p>
+    <form id="weather-form">
+        <label for="city">Chose a City:</label>
+        <select id="city" name="city" required>
+            <option value="">--Select--</option>
+            <option value="New York">New York</option>
+            <option value="Boston">Boston</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Washington">Washington</option>
+            <option value="Atlanta">Atlanta</option>
+            <option value="Orlando">Orlando</option>
+            <option value="Seattle">Seattle</option>
+            <option value="San Francisco">San Francisco</option>
+            <option value="Los Angeles">Los Angeles</option>
+        </select>
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="Forecast"></div>
+    <div>
+        <span id="loc"></span>
+    </div>
+    </div>
+    
+    <script src="weatherapp.js"></script>
+</body>
+</html>
