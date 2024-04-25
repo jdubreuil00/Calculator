@@ -38,6 +38,11 @@ p, label, select, #Forecast, #loc{
     100%{translate: 0 0;color: rgba(0, 0, 0,1);}
 }
 
+@keyframes moveupwht {
+    0%{translate: 0% 100%;color: rgba(1, 1, 1,0);}
+    100%{translate: 0 0;color: rgba(1, 1, 1,1);}
+}
+
 button{
     background-color: rgb(68, 68, 233);
     color:#fff;
