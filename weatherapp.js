@@ -7,8 +7,12 @@ function getLocation() {
     function success(position) {
         lat = position.coords.latitude;
         lon = position.coords.longitude;
-        const locationDispaly = document.getElementById("loc");
-        locationDispaly.innerHTML = `Your location Latitude:${lat} and Longitude:${lon}`;
+        const locationDisplay = document.getElementById("loc");
+        locationDisplay.innerHTML = `Your location Latitude:${lat} and Longitude:${lon}`;
+        locationDisplay.classList.add("weather-anim")
+        locationDisplay.addEventListener("animationend",()=>{
+            locationDisplay.classList.remove("weather-anim")
+        })
 
         getOffice(position.coords.latitude, position.coords.longitude)
     }
@@ -51,8 +55,8 @@ function dropLocation(event) {
     } else if (city == "Los Angeles") {
         result = makeResult("LOX", 155, 45, city, "CA");
     }
-    const locationDispaly = document.getElementById("loc");
-    locationDispaly.innerHTML = ``;
+    const locationDisplay = document.getElementById("loc");
+    locationDisplay.innerHTML = ``;
 
     getForecast(result)
 }
@@ -126,7 +130,10 @@ async function getForecast(location) {
         forecastData.appendChild(temeratureF);
         forecastData.appendChild(humidity);
         forecastData.appendChild(windspeed);
-        //.style.animation = "wipe 5s"
+        forecastData.classList.add("weather-anim")
+        forecastData.addEventListener("animationend",()=>{
+            forecastData.classList.remove("weather-anim")
+        })
 
         console.log(data.properties.periods[0].detailedForecast)
     }
@@ -137,12 +144,9 @@ async function getForecast(location) {
         let errorMsg = document.createElement("p");
         errorMsg.innerHTML = `Error getting weather data: ${error}`;
         forecastData.appendChild(errorMsg);
-        forecastData.style.animation = "none";
-        requestAnimationFrame(()=>{
-            forecastData.style.animation = "";
-        })
-        requestAnimationFrame(()=>{
-            forecastData.style.animation = "wipe 5s";
+        forecastData.classList.add("weather-anim")
+        forecastData.addEventListener("animationend",()=>{
+            forecastData.classList.remove("weather-anim")
         })
         
 
