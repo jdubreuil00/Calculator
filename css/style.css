@@ -62,3 +62,7 @@ button{
     animation: moveup 3s; 
 }
 
+.loc-anim{
+    animation: wipe 5s;
+}
+

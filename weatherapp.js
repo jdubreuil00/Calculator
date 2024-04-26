@@ -8,10 +8,11 @@ function getLocation() {
         lat = position.coords.latitude;
         lon = position.coords.longitude;
         const locationDisplay = document.getElementById("loc");
+        const locationDiv = document.getElementById("loc-div");
         locationDisplay.innerHTML = `Your location Latitude:${lat} and Longitude:${lon}`;
-        locationDisplay.classList.add("weather-anim")
-        locationDisplay.addEventListener("animationend",()=>{
-            locationDisplay.classList.remove("weather-anim")
+        locationDiv.classList.add("loc-anim");
+        locationDiv.addEventListener("animationend",()=>{
+            locationDiv.classList.remove("loc-anim")
         })
 
         getOffice(position.coords.latitude, position.coords.longitude)
